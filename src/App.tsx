@@ -1,3 +1,4 @@
+import { TopBanner } from './components/TopBanner';
 import { Navbar, ScrollProgressBar, FloatingWhatsApp } from './components/Navbar';
 import { Footer, BackToTop } from './components/Footer';
 import { HeroSection } from './sections/HeroSection';
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <>
       <ScrollProgressBar />
+      <TopBanner />
       <Navbar />
       <main>
         <HeroSection />

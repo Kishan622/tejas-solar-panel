@@ -54,6 +54,12 @@ export default {
         'counter':        'counter 2s ease-out both',
         'shimmer':        'shimmer 2.5s linear infinite',
         'bounce-slow':    'bounceSlow 2.5s ease-in-out infinite',
+        'text-glow':      'textGlow 2.5s ease-in-out infinite alternate',
+        'ray-spin':       'raySpin 12s linear infinite',
+        'particle-float': 'particleFloat 4s ease-in-out infinite',
+        'banner-slide':   'bannerSlide 0.8s cubic-bezier(0.16,1,0.3,1) both',
+        'orbit':          'orbit 8s linear infinite',
+        'flicker':        'flicker 3s ease-in-out infinite',
       },
       keyframes: {
         fadeUp:     { from: { opacity: '0', transform: 'translateY(40px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
@@ -66,6 +72,24 @@ export default {
         sunRays:    { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
         shimmer:    { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
         bounceSlow: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+        textGlow: {
+          from: { textShadow: '0 0 10px rgba(251,191,36,0.4), 0 0 20px rgba(251,191,36,0.2)' },
+          to:   { textShadow: '0 0 20px rgba(251,191,36,0.9), 0 0 40px rgba(249,115,22,0.6), 0 0 80px rgba(249,115,22,0.3)' },
+        },
+        raySpin: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+        particleFloat: {
+          '0%,100%': { transform: 'translateY(0) scale(1)', opacity: '0.7' },
+          '50%':     { transform: 'translateY(-20px) scale(1.1)', opacity: '1' },
+        },
+        bannerSlide: {
+          from: { opacity: '0', transform: 'translateY(-20px)' },
+          to:   { opacity: '1', transform: 'translateY(0)' },
+        },
+        orbit: { from: { transform: 'rotate(0deg) translateX(60px) rotate(0deg)' }, to: { transform: 'rotate(360deg) translateX(60px) rotate(-360deg)' } },
+        flicker: {
+          '0%,100%': { opacity: '1' },
+          '50%':     { opacity: '0.75' },
+        },
       },
       backgroundImage: {
         'hero-gradient':    'linear-gradient(135deg, #0c4a6e 0%, #1e3a8a 40%, #172554 100%)',
